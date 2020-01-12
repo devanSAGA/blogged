@@ -1,24 +1,10 @@
-- name: Dennis Brotzky
+- name: Devansh Purohit
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/dennis-brotzky.jpg
+    I am a design minded front-end developer at Postman. I mostly spend my time with React and Design Systems.
+  avatar: ./avatars/devansh-purohit.jpg
   social:
-    - url: https://unsplash.com
-    - url: https://stackoverflow.com
-    - url: https://github.com
-    - url: https://github.com
-    - url: https://github.com
+    - url: https://github.com/devanSAGA
+    - url: https://twitter.com/devanshdoesdab
+    - url: https://www.instagram.com/_devansaga_/
+    - url: https://www.linkedin.com/in/devansh-purohit-3541b7140/
   featured: true
-
-- name: Thiago Costa
-  bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/thiago-costa.png
-  social:
-    - url: https://unsplash.com
-    - url: https://stackoverflow.com
-    - url: https://github.com
-    - url: https://github.com
-    - url: https://github.com
