@@ -8,3 +8,13 @@
     - url: https://www.instagram.com/_devansaga_/
     - url: https://www.linkedin.com/in/devansh-purohit-3541b7140/
   featured: true
+- name: Chahak Mehta
+  bio: |
+    I am working as a Data Scientist at Housing.com. I usually pass my time by 
+    trying to learn (not so) useful things (that look cool).
+  avatar: ./avatars/chahak-mehta.jpg
+  social:
+    - url: https://github.com/chahak13
+    - url: https://www.instagram.com/chahak_13/
+    - url: https://www.linkedin.com/in/chahak-mehta-609b18136/
+  featured: true
