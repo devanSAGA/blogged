@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 import Image from '@components/Image';
+import mediaqueries from '@styles/media';
 import { IAuthor } from '@types';
 
 const Bio: React.FC<IAuthor> = ({ author }) => {
@@ -33,6 +34,10 @@ const BioContainer = styled.div`
   align-items: flex-start;
   position: relative;
   left: -10px;
+
+  ${mediaqueries.phablet`
+    margin-bottom: 24px;
+  `};
 `;
 
 const BioAvatar = styled.div`

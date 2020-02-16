@@ -79,6 +79,7 @@ const FooterContainer = styled.div`
 
   ${mediaqueries.phablet`
     padding-bottom: 50px;
+    flex-direction: column;
   `}
 `;
 
@@ -102,7 +103,7 @@ const FooterText = styled.div`
   `}
 
   ${mediaqueries.phablet`
-    margin: 120px auto 100px;
+    margin: 16px 0;
   `}
 `;
 
@@ -111,6 +112,11 @@ const FooterCredits = styled.div`
     font-weight: 600;
     color: ${p => p.theme.colors.primary};
   }
+
+  ${mediaqueries.phablet`
+    width: 290px;
+    text-align: center;
+  `}
 `;
 const FooterGradient = styled.div`
   position: absolute;

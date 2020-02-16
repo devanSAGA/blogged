@@ -129,10 +129,22 @@ const SubSection = styled.div`
 const AuthorsList = styled.div`
   display: flex;
   flex-direction: column;
+
+  ${mediaqueries.phablet`
+    align-items: center;
+
+    Bio {
+      margin-bottom: 16px;
+    }
+  `};
 `;
 
 const Row = styled.div`
   display: flex;
+
+  ${mediaqueries.phablet`
+    flex-direction: column;
+  `};
 `;
 
 const PostList = styled.div`
@@ -202,6 +214,11 @@ const SectionHeading = styled.h4`
   font-size: 24px;
   margin-bottom: 16px;
   color: ${p => p.theme.colors.secondary};
+
+  ${mediaqueries.phablet`
+    margin-bottom: 32px;
+  `}
+
 `;
 
 const GridButton = styled.button<{ active: boolean }>`
