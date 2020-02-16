@@ -6,7 +6,7 @@ module.exports = {
     description: `A collaborative between Devansh and Chahak. Posts on React, JS, Git, Vim, Design Systems and sometimes Random.`,
     hero: {
       heading: `Welcome to Blogged.`,
-      maxWidth: 652
+      maxWidth: 800
     },
     social: [
       {
