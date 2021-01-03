@@ -1,10 +1,10 @@
 - name: Devansh Purohit
   bio: |
-    I am a design minded front-end developer at Postman. I mostly spend my time with React and Design Systems.
+    I am a design minded frontend developer at Postman. I am interested in Design, Design Systems and JavaScript eco system.
   avatar: ./avatars/devansh-purohit.jpg
   social:
     - url: https://github.com/devanSAGA
-    - url: https://twitter.com/devanshdoesdab
+    - url: https://twitter.com/devanshp_
     - url: https://www.instagram.com/_devansaga_/
     - url: https://www.linkedin.com/in/devansh-purohit-3541b7140/
   featured: true
