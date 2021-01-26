@@ -162,7 +162,7 @@ const GridControlsContainer = styled.div`
 `;
 
 const HeadingContainer = styled.div`
-  margin: 100px 0 48px 0;
+  margin: 48px 0 48px 0;
 
   ${mediaqueries.desktop`
     width: 80%;

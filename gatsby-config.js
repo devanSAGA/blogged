@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: `https://blogged.netlify.com`,
     description: `A collaborative between Devansh and Chahak. Posts on React, JS, Git, Vim, Design Systems and sometimes Random.`,
     hero: {
-      heading: `Welcome to Blogged.`,
+      heading: ``,
       maxWidth: 800
     },
     social: [
