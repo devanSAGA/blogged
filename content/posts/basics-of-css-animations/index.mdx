@@ -1,0 +1,129 @@
+---
+title: Basics of CSS Animations
+author: Devansh Purohit
+date: 2021-04-11
+hero: ./images/basics-of-css-animations-hero.jpeg
+excerpt: In this post, I am explaining the basics of CSS Animations
+---
+
+I started learning CSS Animations, and in this article, I am briefly explaining 3 fundamental CSS properties that are at the core of CSS animations:
+[transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition), [animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation), and [@keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes).
+
+### transition
+
+**`transition`** defines the transition between two diffrent state of an element. Here the different states could be **hover** / **active** / **focus**, etc.
+Transitions always require a trigger (change in state) to run.
+
+<iframe
+  src="https://codesandbox.io/embed/agitated-kepler-1vlq9?fontsize=14&theme=dark&module=/index.html,styles.css"
+  style="width:1024px; height:512px; border:0; border-radius: 4px; overflow:hidden;"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+<br />
+
+In the above example, we can see that without transition, the height change _snaps_ between two diffrent snaps.
+`transition` property provides options to make this change smooth.
+
+Let's break down the use of `transition` property in the above example:
+
+**`transition`** is a shorthand syntax. it is made up of 4 CSS properties:
+- [transition-property](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property): Defines the CSS properties to which the transition is going to apply.<br />
+- [transition-duration](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration): Defines the duration of the transition.<br />
+- [transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function): Defines the behaviour and nature of the transition.<br />
+- [transition-delay](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay): Defines the duration to wait before starting the transition effect.<br />
+
+So in this example,
+
+```css
+/* property | duration | timing-function | delay  */
+transition: height 2s ease-in 1s;
+```
+
+- The transition effect is applied to `height` property.
+- The transition effect takes 2s.
+- `ease-in` is the name of the effect.
+- The transition effect starts applying after the wait of 1s.
+
+Now, one thing to observe is that the `transition` is only limited to the initial and final state.
+It can apply the transition effect to a property that is changing its value from A to B.
+
+What if we want to control the intermediate state? i.e. What if we wanted to define multiple states of an element for one complete animation sequence? There comes the `@keyframes` CSS property.
+
+### @keyframes
+
+**`@keyframes`** enables you to define multiple states of element during the animation sequence.
+This gives you more control over the intermediate states of the element. The syntax of the `@keyframes` goes like,
+
+```css
+@keyframes animation-identifier {
+  0% {
+    height: 64px;
+  }
+
+  25% {
+    height: 128px;
+  }
+
+  50% {
+    height: 96px;
+  }
+
+  75% {
+    height: 100px;
+  }
+
+  100% {
+    height: 64px;
+  }
+}
+```
+
+Here, we can observe that, we are able to define how the element styles should change
+throughout the multiple stages of the animation sequence. We will see this in action, just in a bit!
+Before that, I want to share one analogy that'll help you understand this concept better.
+
+You can think of `@keyframes` as a function, where `animation-identifier` is the name of the function
+and just like how we can reuse functions, we can reuse this animation and apply to any element. Now, `@keyframes` is analogous to **_defining the function_**,
+i.e. writing the logic of how the function works. But we still need to **_invoke_** the function to make it work.
+
+How do we invoke(apply) the animation defined inside `@keyframes`? There comes the `animation` CSS property.
+
+### animation
+
+**`animation`** allows you to apply the animation states that you have defined using `@keyframes`.
+
+<iframe
+  src="https://codesandbox.io/embed/vigilant-raman-7u2cl?fontsize=14&hidenavigation=1&theme=dark&module=/index.html,styles.css"
+  style="width:1024px; height:512px; border:0; border-radius: 4px; overflow:hidden;"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+<br />
+
+<p
+  style={{
+    color: "#505050",
+    marginBottom: '24px',
+    fontSize: '12px',
+    lineHeight: '1.5'
+  }}
+>
+Note that, the <b><i>animation-identifier</i></b> name you have given to <i>@keyframes</i> is acting as a function name, and using inside `animation` property to apply the animation.
+</p>
+
+Just like `transition`, **`animation`** is also a shorthand for multiple CSS properties, although the list is a little bigger.
+So we will only cover the ones which are frequently used. You can find the full list [here](https://developer.mozilla.org/en-US/docs/Web/CSS/animation#constituent_properties).
+
+```css
+/* animation-name | duration | timing-function | delay */
+animation: animation-identifier 2s ease-out 1s;
+```
+
+- [animation-name](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name): Specifies name of the animation that you defined via @keyframes.<br />
+- [animation-duration](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration): Defines the duration of the animation.<br />
+- [animation-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function): Defines the behaviour and nature of the animation.<br />
+- [animation-delay](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay): Defines the time to wait from before starting the animation.<br />
+
+---
