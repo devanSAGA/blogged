@@ -54,7 +54,7 @@ const Footer: React.FC<{}> = () => {
             © {copyrightDate} {name}
           </FooterText>
           <FooterCredits>
-            Created with Magic 🔮 and <a href='https://github.com/narative/gatsby-theme-novela'>Gatsby-Theme-Novela</a>
+            Created with Magic 🔮 and gatsby-theme-novela
           </FooterCredits>
         </FooterContainer>
       </Section>
